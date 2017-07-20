@@ -23,7 +23,17 @@
 `cobbler list`<br>
 
 ### 安装CentOS6
+将CentOS6的安装光盘插入光驱中，然后执行以下命令：
+
 `mount -r /dev/cdrom /mnt`<br>
 `cobbler import --path=/mnt/ --name=CentOS6 --arch=x86_64`<br>
+`cobbler sync`<br>
+`cobbler list`<br>
+
+### 安装CentOS7
+将CentOS7的安装光盘插入光驱中，然后执行以下命令：
+
+`mount -r /dev/cdrom /mnt`<br>
+`cobbler import --path=/mnt/ --name=CentOS7 --arch=x86_64`<br>
 `cobbler sync`<br>
 `cobbler list`<br>
