@@ -6,10 +6,10 @@
 网卡设为nat模式
 
 # cobbler server install guide:
-`mkdir /usr/src/cobbler`<br>
+`cd /usr/src`<br>
 `git clone https://github.com/chendao2015/cobbler.git`<br>
 `cd cobbler`<br>
-`tar xf cobbler.tar.bz2 -C /usr/src/cobbler/`<br>
+`tar xf cobbler.tar.bz2`<br>
 `chmod +x cobbler.sh`<br>
 `./cobbler.sh`<br>
 
