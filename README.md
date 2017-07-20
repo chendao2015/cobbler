@@ -23,7 +23,7 @@
 `cobbler list`<br>
 
 ### 安装CentOS6
-`mount -r /dev/cdrom /mnt`<br><br>
+`mount -r /dev/cdrom /mnt`<br>
 `cobbler import --path=/mnt/ --name=CentOS6 --arch=x86_64`<br>
 `cobbler sync`<br>
 `cobbler list`<br>
