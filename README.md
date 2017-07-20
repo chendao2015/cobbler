@@ -14,9 +14,16 @@
 `./cobbler.sh`<br>
 
 ## 导入ISO文件
-把要安装的操作系统的iso上传到/usr/src目录下，或者直接挂载到光驱中，假设这里是安装ubuntu12.04<br>
+把要安装的操作系统的iso上传到/usr/src目录下，或者直接挂载到光驱中
 
+### 安装ubuntu12.04
 `mount -o loop /usr/src/ubuntu_12.04_server_x64.iso /mnt`<br>
 `cobbler import --path=/mnt/ --name=ubuntu12.04 --arch=x86_64`<br>
+`cobbler sync`<br>
+`cobbler list`<br>
+
+### 安装CentOS6
+`mount -r /dev/cdrom /mnt`<br><br>
+`cobbler import --path=/mnt/ --name=CentOS6 --arch=x86_64`<br>
 `cobbler sync`<br>
 `cobbler list`<br>
