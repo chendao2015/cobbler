@@ -6,5 +6,9 @@
 # cobbler install guide:
 mkdir /usr/src/cobbler
 
-git clone git@github.com:chendao2015/cobbler.git
+git clone https://github.com/chendao2015/cobbler.git
+cd cobbler
+tar xf cobbler.tar.bz2 -C /usr/src/cobbler/
+chmod +x cobbler.sh
+./cobbler.sh
 
