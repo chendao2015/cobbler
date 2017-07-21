@@ -5,8 +5,15 @@
 
 网卡设为nat模式
 
+## 开始前，先关闭防火墙和SELINUX
+`systemctl stop firewalld.service`<br>
+`systemctl disable firewalld.service`<br>
+`sed -i 's/SELINUX=.*/SELINUX=disabled/' /etc/sysconfig/selinux`<br>
+`sed -i 's/SELINUX=.*/SELINUX=disabled/' /etc/selinux/config`<br>
+`reboot`<br>
+
 # cobbler server install guide:
-`yum -y install git`<br>
+`yum -y install git bzip2`<br>
 `cd /usr/src`<br>
 `git clone https://github.com/chendao2015/cobbler.git`<br>
 `cd cobbler`<br>
