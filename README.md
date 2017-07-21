@@ -18,7 +18,7 @@
 `git clone https://github.com/chendao2015/cobbler.git`<br>
 `cd cobbler`<br>
 `tar xf cobbler.tar.bz2`<br>
-`chmod +x cobbler.sh`<br>
+`chmod +x cobbler*.sh`<br>
 `./cobbler.sh`<br>
 
 ## 导入ISO文件
