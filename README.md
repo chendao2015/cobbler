@@ -6,6 +6,7 @@
 网卡设为nat模式
 
 # cobbler server install guide:
+`yum -y install git`<br>
 `cd /usr/src`<br>
 `git clone https://github.com/chendao2015/cobbler.git`<br>
 `cd cobbler`<br>
