@@ -18,9 +18,8 @@
 `git clone https://github.com/chendao2015/cobbler.git`<br>
 `cd cobbler`<br>
 `tar xf cobbler.tar.bz2`<br>
-`chmod +x cobbler*.sh`<br>
-`./cobbler.sh`<br>
-`./cobbler_check.sh`<br>
+`chmod +x cobbler.sh`<br>
+`./cobbler.sh`
 
 ## 导入ISO文件
 把要安装的操作系统的iso上传到/usr/src目录下，或者直接挂载到光驱中
