@@ -45,7 +45,7 @@
 `cobbler sync`<br>
 
 ### 根据客户端mac地址实现自动化安装
-`cobbler system add --name=zabbix --mac=00:50:56:2E:88:1D --profile=centos7 --ip-address=192.168.1.200 --subnet=255.255.255.0 --gateway=192.168.1.2 --interface=eth0 --static=1 --hostname=zabbix --name-servers="192.168.1.2"`<br>
+`cobbler system add --name=zabbix --mac=00:50:56:2E:88:1D --profile=CentOS7-x86_64 --ip-address=192.168.1.200 --subnet=255.255.255.0 --gateway=192.168.1.2 --interface=eth0 --static=1 --hostname=zabbix --name-servers="192.168.1.2"`<br>
 `cobbler system list`<br>
 `cobbler sync`
 #### 说明
