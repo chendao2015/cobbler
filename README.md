@@ -49,8 +49,8 @@
 
 ### 配置kickstart
 `cp /usr/src/cobbler/*.cfg /var/lib/cobbler/kickstarts/`<br>
-`cobbler profile edit --name=CentOS6 --kickstart=/var/lib/cobbler/kickstarts/centos6.cfg`<br>
-`cobbler profile edit --name=CentOS7 --kickstart=/var/lib/cobbler/kickstarts/centos7.cfg`<br>
+`cobbler profile edit --name=CentOS6-x86_64 --kickstart=/var/lib/cobbler/kickstarts/centos6.cfg`<br>
+`cobbler profile edit --name=CentOS7-x86_64 --kickstart=/var/lib/cobbler/kickstarts/centos7.cfg`<br>
 `sed -ri '/MENU TITLE/s/(MENU TITLE Cobbler).*/\1 \| QQ:1470044516/g' /etc/cobbler/pxe/pxedefault.template`<br>
 `cobbler sync`<br>
 
