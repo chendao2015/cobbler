@@ -31,14 +31,6 @@
 `cobbler sync`<br>
 `cobbler list`<br>
 
-### 安装CentOS6
-将CentOS6的安装光盘插入光驱中，然后执行以下命令：
-
-`mount -r /dev/cdrom /mnt`<br>
-`cobbler import --path=/mnt/ --name=CentOS6 --arch=x86_64`<br>
-`cobbler sync`<br>
-`cobbler list`<br>
-
 ### 安装CentOS7
 将CentOS7的安装光盘插入光驱中，然后执行以下命令：
 
@@ -49,16 +41,15 @@
 
 ### 配置kickstart
 `cp /usr/src/cobbler/*.cfg /var/lib/cobbler/kickstarts/`<br>
-`cobbler profile edit --name=CentOS6-x86_64 --kickstart=/var/lib/cobbler/kickstarts/centos6.cfg`<br>
 `cobbler profile edit --name=CentOS7-x86_64 --kickstart=/var/lib/cobbler/kickstarts/centos7.cfg`<br>
 `sed -ri '/MENU TITLE/s/(MENU TITLE Cobbler).*/\1 \| QQ:1470044516/g' /etc/cobbler/pxe/pxedefault.template`<br>
 `cobbler sync`<br>
 
 ### 根据客户端mac地址实现自动化安装
-`cobbler system add --name=zabbix --mac=00:50:56:2E:88:1D --profile=centos6 --ip-address=192.168.1.200 --subnet=255.255.255.0 --gateway=192.168.1.2 --interface=eth0 --static=1 --hostname=zabbix --name-servers="172.16.65.10"`<br>
+`cobbler system add --name=zabbix --mac=00:50:56:2E:88:1D --profile=centos7 --ip-address=192.168.1.200 --subnet=255.255.255.0 --gateway=192.168.1.2 --interface=eth0 --static=1 --hostname=zabbix --name-servers="192.168.1.2"`<br>
 `cobbler system list`<br>
 `cobbler sync`
 #### 说明
 --name  表示给客户端定义一个名字<br>
 --mac 表示客户端的mac地址<br>
---profile 表示客户端使用哪个kickstart文件进行系统安装，ks文件后的.cfg必须省略（比如centos6.cfg必须写为--profile=centos6）
+--profile 表示客户端使用哪个kickstart文件进行系统安装，ks文件后的.cfg必须省略（比如centos7.cfg必须写为--profile=centos7）
