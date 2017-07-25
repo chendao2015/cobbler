@@ -48,7 +48,3 @@
 `cobbler system add --name=zabbix --mac=00:50:56:2E:88:1D --profile=CentOS7-x86_64 --ip-address=192.168.1.200 --subnet=255.255.255.0 --gateway=192.168.1.2 --interface=eth0 --static=1 --hostname=zabbix --name-servers="192.168.1.2"`<br>
 `cobbler system list`<br>
 `cobbler sync`
-#### 说明
---name  表示给客户端定义一个名字<br>
---mac 表示客户端的mac地址<br>
---profile 表示客户端使用哪个kickstart文件进行系统安装，ks文件后的.cfg必须省略（比如centos7.cfg必须写为--profile=centos7）
