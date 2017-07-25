@@ -1,5 +1,5 @@
 # cobbler服务器端环境说明:
-系统：CentOS6迷你安装
+系统：CentOS7迷你安装
 
 本实验环境为vmware虚拟机
 
